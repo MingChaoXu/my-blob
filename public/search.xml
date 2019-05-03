@@ -1,51 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-  
-    
-    <entry>
-      <title>CVPR2019 PaperReading(1)</title>
-      <link href="/2019/05/02/PaperReading/"/>
-      <url>/2019/05/02/PaperReading/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li style="list-style: none"><input type="checkbox"> <strong>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Striking the Right Balance with Uncertainty</strong></li><li style="list-style: none"><input type="checkbox"> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Efficient Video Classification Using Fewer Frames</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Zero-Shot Task Transfer</strong></li><li style="list-style: none"><input type="checkbox"> <strong>C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Transferrable Prototypical Networks for Unsupervised Domain Adaptation</strong></li></ul><h3 id="On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions"><a href="#On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions" class="headerlink" title="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions"></a>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</h3><blockquote></blockquote><h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a>Zero-Shot Task Transfer</h3><blockquote><p>这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。<br>这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。<br>本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot:</p><ul><li>surface-normal </li><li>room layout</li><li>depth</li><li>camera pose estimation</li></ul></blockquote><h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4>]]></content>
-      
-      
+<search>
+  <entry>
+    <title><![CDATA[blob收录踩坑]]></title>
+    <url>%2F2019%2F05%2F03%2Fblob%E6%94%B6%E5%BD%95%E8%B8%A9%E5%9D%91%2F</url>
+    <content type="text"><![CDATA[本篇文章简单记录一下博客网站优化过程中的踩坑点 更换域名博客搭建完的第二天，我手痒（ーー；）又花了一段时间搞了域名迁移与seo优化。╮(╯▽╰)╭，接下来简单讲一下过程中遇到的一些坑点。首先说把博客从github pages上迁移到自己到域名上，之前没有买过域名，网上都说国内建议买阿里云的域名，我搜了一下感觉价格略贵，学生党并不想多花钱(T ^ T)，但是百度给我推送的腾讯云刚好有打折活动，xyz的域名新用户1年只要1元，买了啊！一通注册操作后，来到了域名管理的后台，主要是需要域名解析的操作，中间涉及到cname解析等等，这些网上一些大牛们都有教程，我就不赘述了。花时间的主要原因是不熟练。另外在换域名的过程中，url的设置可以加上https:\\，(自行对应)。hexo 生成并发布的过程中，我发现github上的common网址每次刷新都会变回$github.io$，每次刷新好麻烦呀！┻━┻︵╰(‵□′)╯︵┻━┻，搜教程发现只需要在站点的source文件夹下加入一个CNAME文件即可，看清楚，是CNAME，而不是CHAME！我第一次写错了，来回找错误没找到，折腾好久发现文件名写错了(╯‵□′)╯︵┻━┻，改完之后每次上传就可以自动更新site网址啦～ 收录博客网址接下来就是让自己的博客可以被百度和谷歌收录啦，生命在于折腾，呦吼吼（≧∇≦）这里面遇到了挺多坑的，按着教程走也挺慢才走通。首先，在被百度收录的过程中，在添加网址时，百度搞出了新花样！需要注册熊掌id，但是在注册过程中要用到手机端的百度app人脸验证（度娘这波广告打得好）。不过这里面需要吐槽一下，百度的这个人脸验证可能时刚出来不久，功能使用体验很差（ーー；），摄像头调用还经常失败，黑屏，延迟，卡顿什么的低级bug常发生，总之就是按照他的流程我走了n遍才验证通过(╯°□°）╯︵ ┻━┻，用户体验较差。接下来就是提交站点地图了，这里面看教程有一个误解，我使用的时cname验证，因为容易嘛，但是要注意主机记录是复制的前面那一串字符串，后面的域名就不要复制了，腾讯云的dns解析会自动给加上，拿我的举例，就是把$.xumingchao.xyz$给去掉。其他就没有什么坑了，还有一点就是百度的sitemap加进去后反应真慢，看了一下博客发现这是正常现象，反正我现在还没有通过。Google收录的过程中，主要遇到的坑是，Google的search console更新版本了，之前的收录方式对应不上了，不过我自己摸索着使用文件验证成功收录了https://xumingchao.xyz，但是xumingchao.xyz只能用dns配置来收录验证，这里面我是个小白，什么都不懂，暂时也没有搞通，以后再搞吧 这里推荐一个博主的教程：通向教程的任意门]]></content>
       <categories>
-          
-          <category> PaperReading </category>
-          
+        <category>Technology</category>
       </categories>
-      
-      
-        <tags>
-            
-            <tag> transfer learning </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>Hello World</title>
-      <link href="/2019/05/01/hello-world/"/>
-      <url>/2019/05/01/hello-world/</url>
-      
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-      
-      
+  </entry>
+  <entry>
+    <title><![CDATA[CVPR2019 PaperReading(1)]]></title>
+    <url>%2F2019%2F05%2F02%2FPaperReading%2F</url>
+    <content type="text"><![CDATA[On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions Striking the Right Balance with Uncertainty NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences Efficient Video Classification Using Fewer Frames Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval Zero-Shot Task Transfer C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection Transferrable Prototypical Networks for Unsupervised Domain Adaptation Zero-Shot Task Transfer 这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot: surface-normal room layout depth camera pose estimation Method定义已知ground truth的m个task为${\tau_{1},…,\tau_{m}}$, zero-shot task为${\tau_{m+1},…,\tau_{K}}$.用多任务学习的方法，将需要学习的meta-learning function $F(.)$建模为有m个branches的network，参数分别为${W_{1},…,W_{m}}$，这些任务分支在开头没有联系，在后面通过一个$W_{common}$的block来coupled。因此，$F(.)$可以分为两个部分，第一个部分是m个$W_{i}s$，第二个部分是$W_{common}$。]]></content>
       <categories>
-          
-          <category> Technology </category>
-          
+        <category>PaperReading</category>
       </categories>
-      
-      
-    </entry>
-    
-    
-  
-  
+      <tags>
+        <tag>transfer learning</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2F2019%2F05%2F01%2Fhello-world%2F</url>
+    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+  </entry>
 </search>

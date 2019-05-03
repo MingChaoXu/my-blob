@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="MCXU">
 <meta property="og:description" content="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions  Striking the Right Balance with Uncertainty  NM-Net: Mining Reliable Neighbors for Robust F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-03T06:21:20.209Z">
+<meta property="og:updated_time" content="2019-05-03T13:21:09.836Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CVPR2019 PaperReading(1)">
 <meta name="twitter:description" content="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions  Striking the Right Balance with Uncertainty  NM-Net: Mining Reliable Neighbors for Robust F">
@@ -327,7 +327,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">2</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
 
   </li>
         
@@ -489,7 +489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-03 14:21:20" itemprop="dateModified" datetime="2019-05-03T14:21:20+08:00">2019-05-03</time>
+                <time title="修改时间：2019-05-03 21:21:09" itemprop="dateModified" datetime="2019-05-03T21:21:09+08:00">2019-05-03</time>
               
             
           </span>
@@ -551,9 +551,9 @@
 <li style="list-style: none"><input type="checkbox"> <strong>C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Transferrable Prototypical Networks for Unsupervised Domain Adaptation</strong></li>
 </ul>
-<h3 id="On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions"><a href="#On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions" class="headerlink" title="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions"></a>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</h3><blockquote>
-</blockquote>
-<h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a>Zero-Shot Task Transfer</h3><blockquote>
+<!-- ### On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions
+>  -->
+<h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a><a href="http://arxiv.org/abs/1903.01092" target="_blank" rel="noopener">Zero-Shot Task Transfer</a></h3><blockquote>
 <p>这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。<br>这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。<br>本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot:</p>
 <ul>
 <li>surface-normal </li>
@@ -562,11 +562,16 @@
 <li>camera pose estimation</li>
 </ul>
 </blockquote>
-<h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4>
+<h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><p>定义已知ground truth的m个task为${\tau_{1},…,\tau_{m}}$, zero-shot task为${\tau_{m+1},…,\tau_{K}}$.<br>用多任务学习的方法，将需要学习的meta-learning function $F(.)$建模为有m个branches的network，参数分别为${W_{1},…,W_{m}}$，这些任务分支在开头没有联系，在后面通过一个$W_{common}$的block来coupled。<br>因此，$F(.)$可以分为两个部分，第一个部分是m个$W_{i}s$，第二个部分是$W_{common}$。</p>
+
       
     </div>
 
     
+      
+
+
+    
 
     
     
@@ -577,6 +582,39 @@
     
       
     
+    
+      <div>
+        <div id="reward-container">
+  <div></div>
+  <button id="reward-button" disable="enable" onclick="var qr = document.getElementById(&quot;qr&quot;); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/wechatpay.jpeg" alt="xu mingchao 微信支付">
+        <p>微信支付</p>
+      </div>
+    
+      
+      
+        
+      
+      <div style="display: inline-block">
+        <img src="/images/alipay.jpeg" alt="xu mingchao 支付宝">
+        <p>支付宝</p>
+      </div>
+    
+
+  </div>
+</div>
+
+      </div>
     
 
     
@@ -660,6 +698,10 @@
 
           <div class="post-nav-prev post-nav-item">
             
+              <a href="/2019/05/03/blob收录踩坑/" rel="prev" title="blob收录踩坑">
+                blob收录踩坑 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
       
@@ -733,7 +775,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -860,7 +902,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions"><span class="nav-number">1.</span> <span class="nav-text">On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Zero-Shot-Task-Transfer"><span class="nav-number">2.</span> <span class="nav-text">Zero-Shot Task Transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#methods"><span class="nav-number">2.1.</span> <span class="nav-text">methods</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Zero-Shot-Task-Transfer"><span class="nav-number">1.</span> <span class="nav-text">Zero-Shot Task Transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.</span> <span class="nav-text">Method</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -1398,6 +1440,46 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
   
 
 
