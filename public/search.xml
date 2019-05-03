@@ -1,22 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search>
-  <entry>
-    <title><![CDATA[CVPR2019 PaperReading(1)]]></title>
-    <url>%2F2019%2F05%2F02%2FPaperReading%2F</url>
-    <content type="text"><![CDATA[On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions Striking the Right Balance with Uncertainty NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences Efficient Video Classification Using Fewer Frames Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval Zero-Shot Task Transfer C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection Transferrable Prototypical Networks for Unsupervised Domain Adaptation On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions Zero-Shot Task Transfer 这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot: surface-normal room layout depth camera pose estimation]]></content>
+<search> 
+  
+  
+    
+    <entry>
+      <title>CVPR2019 PaperReading(1)</title>
+      <link href="/2019/05/02/PaperReading/"/>
+      <url>/2019/05/02/PaperReading/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li style="list-style: none"><input type="checkbox"> <strong>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Striking the Right Balance with Uncertainty</strong></li><li style="list-style: none"><input type="checkbox"> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Efficient Video Classification Using Fewer Frames</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Zero-Shot Task Transfer</strong></li><li style="list-style: none"><input type="checkbox"> <strong>C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection</strong></li><li style="list-style: none"><input type="checkbox"> <strong>Transferrable Prototypical Networks for Unsupervised Domain Adaptation</strong></li></ul><h3 id="On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions"><a href="#On-the-Structural-Sensitivity-of-Deep-Convolutional-Networks-to-the-Directions-of-Fourier-Basis-Functions" class="headerlink" title="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions"></a>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</h3><blockquote></blockquote><h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a>Zero-Shot Task Transfer</h3><blockquote><p>这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。<br>这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。<br>本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot:</p><ul><li>surface-normal </li><li>room layout</li><li>depth</li><li>camera pose estimation</li></ul></blockquote><h4 id="methods"><a href="#methods" class="headerlink" title="methods"></a>methods</h4>]]></content>
+      
+      
       <categories>
-        <category>PaperReading</category>
+          
+          <category> PaperReading </category>
+          
       </categories>
-      <tags>
-        <tag>transfer learning</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[Hello World]]></title>
-    <url>%2F2019%2F05%2F01%2Fhello-world%2F</url>
-    <content type="text"><![CDATA[Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick StartCreate a new post1$ hexo new "My New Post" More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info: Generating Deploy to remote sites1$ hexo deploy More info: Deployment]]></content>
+      
+      
+        <tags>
+            
+            <tag> transfer learning </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2019/05/01/hello-world/"/>
+      <url>/2019/05/01/hello-world/</url>
+      
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
       <categories>
-        <category>Technology</category>
+          
+          <category> Technology </category>
+          
       </categories>
-  </entry>
+      
+      
+    </entry>
+    
+    
+  
+  
 </search>
