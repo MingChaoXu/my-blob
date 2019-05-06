@@ -289,7 +289,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -327,7 +327,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
         
@@ -427,7 +427,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/2019/05/03/blob收录踩坑/">
+    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/pytorch-并行bug/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xu mingchao">
@@ -447,7 +447,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/03/blob收录踩坑/" class="post-title-link" itemprop="url">blob收录踩坑</a>
+                <a href="/pytorch-并行bug/" class="post-title-link" itemprop="url">pytorch--并行bug</a>
               
             
           </h1>
@@ -474,12 +474,365 @@
                 
               
 
-              <time title="创建时间：2019-05-03 16:27:56 / 修改时间：19:37:59" itemprop="dateCreated datePublished" datetime="2019-05-03T16:27:56+08:00">2019-05-03</time>
+              <time title="创建时间：2019-05-06 10:21:13 / 修改时间：14:28:15" itemprop="dateCreated datePublished" datetime="2019-05-06T10:21:13+08:00">2019-05-06</time>
             
 
             
               
 
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>官方版本的pytorch 并行方式一般使用下面这种方式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; id = <span class="string">'0,1'</span></span><br><span class="line">&gt; model = nn.DataParallel(model, device_ids=id) </span><br></pre></td></tr></table></figure>
+<p>这种并行方式主程序只会运行一次，并在跑模型前向的时候自动把batch平分到各卡，这就带来一个问题，当模型有两个输入时，例如一个batch为32，1个batch为2，假如用4卡并行，会出现第一个输入均分到各卡上是batch为8的tensor，但是第二个输入会有卡分配不到tensor，这时候程序会报错。我理解的错误是由这个原因导致的，解决办法也许是换一种并行方式，利用broudcast整个各卡信息。</p>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/pytorch调试记录/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xu mingchao">
+      <meta itemprop="description" content="xumingchao's homepage">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MCXU">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/pytorch调试记录/" class="post-title-link" itemprop="url">pytorch调试记录(1)</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-05 16:56:25 / 修改时间：18:17:05" itemprop="dateCreated datePublished" datetime="2019-05-05T16:56:25+08:00">2019-05-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>昨天调试pytorch 并行的时候发现一个以前没有注意到的细节</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; id = <span class="string">'0,1'</span></span><br><span class="line">&gt; torch.device(id)</span><br><span class="line">&gt; tensor.to(id)</span><br><span class="line">&gt; model = nn.DataParallel(model, device_ids=id) </span><br></pre></td></tr></table></figure>
+<p>这里的device和实际显卡的id并不对应，想要和实际显卡id对应，可以通过下面这种方式对应</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; id = <span class="number">2</span></span><br><span class="line">&gt; torch.cuda.set_device(id)</span><br></pre></td></tr></table></figure>
+<p>or </p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&gt; os.environ[<span class="string">"CUDA_DEVICE_ORDER"</span>] = <span class="string">'2,3'</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    
+      
+
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/blob收录踩坑/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="xu mingchao">
+      <meta itemprop="description" content="xumingchao's homepage">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="MCXU">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/blob收录踩坑/" class="post-title-link" itemprop="url">blob收录踩坑</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          
+
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2019-05-03 16:27:56" itemprop="dateCreated datePublished" datetime="2019-05-03T16:27:56+08:00">2019-05-03</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-05-06 17:11:07" itemprop="dateModified" datetime="2019-05-06T17:11:07+08:00">2019-05-06</time>
               
             
           </span>
@@ -539,7 +892,8 @@
 <h3 id="更换域名"><a href="#更换域名" class="headerlink" title="更换域名"></a>更换域名</h3><p>博客搭建完的第二天，我手痒（ーー；）又花了一段时间搞了域名迁移与seo优化。╮(╯▽╰)╭，接下来简单讲一下过程中遇到的一些坑点。<br>首先说把博客从github pages上迁移到自己到域名上，之前没有买过域名，网上都说国内建议买阿里云的域名，我搜了一下感觉价格略贵，学生党并不想多花钱(T ^ T)，但是百度给我推送的腾讯云刚好有打折活动，xyz的域名新用户1年只要1元，买了啊！<br>一通注册操作后，来到了域名管理的后台，主要是需要域名解析的操作，中间涉及到cname解析等等，这些网上一些大牛们都有教程，我就不赘述了。花时间的主要原因是不熟练。<br>另外在换域名的过程中，url的设置可以加上https:\\，(自行对应)。<br>hexo 生成并发布的过程中，我发现github上的common网址每次刷新都会变回$github.io$，每次刷新好麻烦呀！┻━┻︵╰(‵□′)╯︵┻━┻，搜教程发现只需要在站点的source文件夹下加入一个CNAME文件即可，看清楚，是CNAME，而不是CHAME！我第一次写错了，来回找错误没找到，折腾好久发现文件名写错了(╯‵□′)╯︵┻━┻，改完之后每次上传就可以自动更新site网址啦～</p>
 <h3 id="收录博客网址"><a href="#收录博客网址" class="headerlink" title="收录博客网址"></a>收录博客网址</h3><p>接下来就是让自己的博客可以被百度和谷歌收录啦，生命在于折腾，呦吼吼（≧∇≦）<br>这里面遇到了挺多坑的，按着教程走也挺慢才走通。首先，在被百度收录的过程中，在添加网址时，百度搞出了新花样！需要注册熊掌id，但是在注册过程中要用到手机端的百度app人脸验证（度娘这波广告打得好）。不过这里面需要吐槽一下，百度的这个人脸验证可能时刚出来不久，功能使用体验很差（ーー；），摄像头调用还经常失败，黑屏，延迟，卡顿什么的低级bug常发生，总之就是按照他的流程我走了n遍才验证通过(╯°□°）╯︵ ┻━┻，用户体验较差。接下来就是提交站点地图了，这里面看教程有一个误解，我使用的时cname验证，因为容易嘛，但是要注意主机记录是复制的前面那一串字符串，后面的域名就不要复制了，腾讯云的dns解析会自动给加上，拿我的举例，就是把$.xumingchao.xyz$给去掉。其他就没有什么坑了，还有一点就是百度的sitemap加进去后反应真慢，看了一下博客发现这是正常现象，反正我现在还没有通过。<br>Google收录的过程中，主要遇到的坑是，Google的search console更新版本了，之前的收录方式对应不上了，不过我自己摸索着使用文件验证成功收录了<a href="https://xumingchao.xyz">https://xumingchao.xyz</a>，但是<a href="https://xumingchao.xyz">xumingchao.xyz</a>只能用dns配置来收录验证，这里面我是个小白，什么都不懂，暂时也没有搞通，以后再搞吧</p>
 <p><img src="http://pqxeslx06.bkt.clouddn.com/dognotsay.jpeg-style1" width="250" height="200" div align="center"></p>
-<p>这里推荐一个博主的教程：<br><a href="https://blog.csdn.net/sunshine940326/article/details/70936988/" target="_blank" rel="noopener">通向教程的任意门</a></p>
+<p>这里推荐一个博主的教程：<br><a href="https://blog.csdn.net/sunshine940326/article/details/70936988/" rel="external nofollow noopener noreferrer" target="_blank">通向教程的任意门</a></p>
+<p><a href="http://www.yuan-ji.me/Hexo-%E4%BC%98%E5%8C%96%EF%BC%9A%E6%8F%90%E4%BA%A4sitemap%E5%8F%8A%E8%A7%A3%E5%86%B3%E7%99%BE%E5%BA%A6%E7%88%AC%E8%99%AB%E6%8A%93%E5%8F%96-GitHub-Pages-%E9%97%AE%E9%A2%98/" rel="external nofollow noopener noreferrer" target="_blank">教程二</a></p>
 
           
         
@@ -600,7 +954,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/2019/05/02/PaperReading/">
+    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/PaperReading/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xu mingchao">
@@ -620,7 +974,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/02/PaperReading/" class="post-title-link" itemprop="url">CVPR2019 PaperReading(1)</a>
+                <a href="/PaperReading/" class="post-title-link" itemprop="url">CVPR2019 PaperReading(1)</a>
               
             
           </h1>
@@ -664,7 +1018,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-03 21:21:09" itemprop="dateModified" datetime="2019-05-03T21:21:09+08:00">2019-05-03</time>
+                <time title="修改时间：2019-05-04 20:28:47" itemprop="dateModified" datetime="2019-05-04T20:28:47+08:00">2019-05-04</time>
               
             
           </span>
@@ -721,16 +1075,16 @@
             <ul>
 <li style="list-style: none"><input type="checkbox"> <strong>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Striking the Right Balance with Uncertainty</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>Efficient Video Classification Using Fewer Frames</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>C2AE: Class Conditioned Auto-Encoder for Open-set Recognition</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>Zero-Shot Task Transfer</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>Zero-Shot Task Transfer</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Transferrable Prototypical Networks for Unsupervised Domain Adaptation</strong></li>
 </ul>
 <!-- ### On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions
 >  -->
-<h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a><a href="http://arxiv.org/abs/1903.01092" target="_blank" rel="noopener">Zero-Shot Task Transfer</a></h3><blockquote>
+<h3 id="Zero-Shot-Task-Transfer"><a href="#Zero-Shot-Task-Transfer" class="headerlink" title="Zero-Shot Task Transfer"></a><a href="http://arxiv.org/abs/1903.01092" rel="external nofollow noopener noreferrer" target="_blank">Zero-Shot Task Transfer</a></h3><blockquote>
 <p>这篇文章是针对zero shot的任务提出了一个新的meta learning的算法——TTNet。<br>这个meta-learner 学习模型参数时从有ground truth的已知任务来迁移到新的zero-shot任务中来。<br>本篇paper是做的taskonomy的zero-shot任务，以下4个任务作为zero-shot:</p>
 <ul>
 <li>surface-normal </li>
@@ -740,7 +1094,27 @@
 </ul>
 </blockquote>
 <h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><p>定义已知ground truth的m个task为${\tau_{1},…,\tau_{m}}$, zero-shot task为${\tau_{m+1},…,\tau_{K}}$.<br>用多任务学习的方法，将需要学习的meta-learning function $F(.)$建模为有m个branches的network，参数分别为${W_{1},…,W_{m}}$，这些任务分支在开头没有联系，在后面通过一个$W_{common}$的block来coupled。<br>因此，$F(.)$可以分为两个部分，第一个部分是m个$W_{i}s$，第二个部分是$W_{common}$。</p>
-
+<p><strong>疑问点：</strong></p>
+<ol>
+<li>本篇paper的TTnet是生成data networl的framework，但是不同的zero shot task的decoder不一样，这一点是如何保证可以生成的呢？</li>
+<li>这个work可以transfer到zero-shot的task上，我理解的关键之处在于两点：<ol>
+<li>任务间的相关矩阵，这个是通过DB算法计算出来的，由30个志愿者打分提供得分依赖</li>
+<li>训练时的transfer model可以让模型学习到transfer的特性<br><del>但是我并没有看到TTnet利用到zero-shot任务的数据</del>，这些任务的数据都是一样的，只是zero-shot没有相应的ground truth</li>
+</ol>
+</li>
+</ol>
+<p><strong>其他细节见paper</strong></p>
+<hr>
+<h3 id="C2AE-Class-Conditioned-Auto-Encoder-for-Open-set-Recognition"><a href="#C2AE-Class-Conditioned-Auto-Encoder-for-Open-set-Recognition" class="headerlink" title="C2AE: Class Conditioned Auto-Encoder for Open-set Recognition"></a><a href="http://arxiv.org/abs/1904.01198" rel="external nofollow noopener noreferrer" target="_blank">C2AE: Class Conditioned Auto-Encoder for Open-set Recognition</a></h3><blockquote>
+<p>这篇paper做的是open-set recognition，zero-shot相关的工作，中规中矩的unseen class分类。开放集识别是近两年一个特别新，且有实际研究价值的方向。作者提出了一个class conditioned auto-encoders的方法，训练过程中分为两个子任务：</p>
+<ol>
+<li>closed-set classification</li>
+<li>open-set identification(区分known还是unknown的class)</li>
+</ol>
+<p>encoder 用closed-set分类任务的pipeline学习第一个子任务，decoder通过条件重构class identity来学习第二个子任务。</p>
+</blockquote>
+<hr>
+<h3 id="NM-Net-Mining-Reliable-Neighbors-for-Robust-Feature-Correspondences"><a href="#NM-Net-Mining-Reliable-Neighbors-for-Robust-Feature-Correspondences" class="headerlink" title="NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences"></a><a href="http://arxiv.org/abs/1904.00320" rel="external nofollow noopener noreferrer" target="_blank">NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</a></h3>
           
         
       
@@ -800,7 +1174,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/2019/05/01/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://xumingchao.xyz/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="xu mingchao">
@@ -820,7 +1194,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/05/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+                <a href="/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
               
             
           </h1>
@@ -918,15 +1292,15 @@
       
         
           
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+            <p>Welcome to <a href="https://hexo.io/" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" rel="external nofollow noopener noreferrer" target="_blank">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" rel="external nofollow noopener noreferrer" target="_blank">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" rel="external nofollow noopener noreferrer" target="_blank">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
+<p>More info: <a href="https://hexo.io/docs/writing.html" rel="external nofollow noopener noreferrer" target="_blank">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
+<p>More info: <a href="https://hexo.io/docs/server.html" rel="external nofollow noopener noreferrer" target="_blank">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
+<p>More info: <a href="https://hexo.io/docs/generating.html" rel="external nofollow noopener noreferrer" target="_blank">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" rel="external nofollow noopener noreferrer" target="_blank">Deployment</a></p>
 
           
         
@@ -1016,7 +1390,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -1056,7 +1430,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -1077,7 +1453,7 @@
                   
                     
                   
-                  <a href="https://github.com/MingChaoXu" title="GitHub &rarr; https://github.com/MingChaoXu" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i></a>
+                  <a href="https://github.com/MingChaoXu" title="GitHub &rarr; https://github.com/MingChaoXu" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-github"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1086,7 +1462,7 @@
                   
                     
                   
-                  <a href="mailto:mingchao.xu.casia@gmail.com" title="E-Mail &rarr; mailto:mingchao.xu.casia@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
+                  <a href="mailto:mingchao.xu.casia@gmail.com" title="E-Mail &rarr; mailto:mingchao.xu.casia@gmail.com" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-envelope"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1095,7 +1471,7 @@
                   
                     
                   
-                  <a href="https://weibo.com/3906077682/profile?topnav=1&wvr=6" title="微博 &rarr; https://weibo.com/3906077682/profile?topnav=1&wvr=6" rel="noopener" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
+                  <a href="https://weibo.com/3906077682/profile?topnav=1&wvr=6" title="微博 &rarr; https://weibo.com/3906077682/profile?topnav=1&wvr=6" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-weibo"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1104,7 +1480,7 @@
                   
                     
                   
-                  <a href="https://www.zhihu.com/people/xu-ming-chao-20-14/activities" title="知乎 &rarr; https://www.zhihu.com/people/xu-ming-chao-20-14/activities" rel="noopener" target="_blank"><i class="fa fa-fw fa-book"></i></a>
+                  <a href="https://www.zhihu.com/people/xu-ming-chao-20-14/activities" title="知乎 &rarr; https://www.zhihu.com/people/xu-ming-chao-20-14/activities" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-book"></i></a>
                 </span>
               
                 <span class="links-of-author-item">
@@ -1113,7 +1489,7 @@
                   
                     
                   
-                  <a href="https://www.facebook.com/profile.php?id=100028192013705" title="FB Page &rarr; https://www.facebook.com/profile.php?id=100028192013705" rel="noopener" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+                  <a href="https://www.facebook.com/profile.php?id=100028192013705" title="FB Page &rarr; https://www.facebook.com/profile.php?id=100028192013705" rel="external nofollow noopener noreferrer" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
                 </span>
               
             </div>
@@ -1169,7 +1545,7 @@
 </div>
 
 
-  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -1177,7 +1553,7 @@
 
 
 
-  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.1</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="external nofollow noopener noreferrer" target="_blank">NexT.Gemini</a> v7.1.1</div>
 
 
 
@@ -1630,9 +2006,13 @@
   
     
       
+        
+      
     
       
-        
+    
+      
+    
       
     
       

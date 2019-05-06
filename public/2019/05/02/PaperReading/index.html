@@ -111,7 +111,7 @@
 <meta property="og:site_name" content="MCXU">
 <meta property="og:description" content="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions  Striking the Right Balance with Uncertainty  NM-Net: Mining Reliable Neighbors for Robust F">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-05-03T13:21:09.836Z">
+<meta property="og:updated_time" content="2019-05-04T12:28:47.602Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CVPR2019 PaperReading(1)">
 <meta name="twitter:description" content="On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions  Striking the Right Balance with Uncertainty  NM-Net: Mining Reliable Neighbors for Robust F">
@@ -289,7 +289,7 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">1</span></a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签<span class="badge">2</span></a>
 
   </li>
         
@@ -327,7 +327,7 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">3</span></a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档<span class="badge">5</span></a>
 
   </li>
         
@@ -489,7 +489,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-05-03 21:21:09" itemprop="dateModified" datetime="2019-05-03T21:21:09+08:00">2019-05-03</time>
+                <time title="修改时间：2019-05-04 20:28:47" itemprop="dateModified" datetime="2019-05-04T20:28:47+08:00">2019-05-04</time>
               
             
           </span>
@@ -544,10 +544,10 @@
         <ul>
 <li style="list-style: none"><input type="checkbox"> <strong>On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Striking the Right Balance with Uncertainty</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>Efficient Video Classification Using Fewer Frames</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>C2AE: Class Conditioned Auto-Encoder for Open-set Recognition</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Doodle to Search: Practical Zero-Shot Sketch-based Image Retrieval</strong></li>
-<li style="list-style: none"><input type="checkbox"> <strong>Zero-Shot Task Transfer</strong></li>
+<li style="list-style: none"><input type="checkbox" checked> <strong>Zero-Shot Task Transfer</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection</strong></li>
 <li style="list-style: none"><input type="checkbox"> <strong>Transferrable Prototypical Networks for Unsupervised Domain Adaptation</strong></li>
 </ul>
@@ -563,7 +563,27 @@
 </ul>
 </blockquote>
 <h4 id="Method"><a href="#Method" class="headerlink" title="Method"></a>Method</h4><p>定义已知ground truth的m个task为${\tau_{1},…,\tau_{m}}$, zero-shot task为${\tau_{m+1},…,\tau_{K}}$.<br>用多任务学习的方法，将需要学习的meta-learning function $F(.)$建模为有m个branches的network，参数分别为${W_{1},…,W_{m}}$，这些任务分支在开头没有联系，在后面通过一个$W_{common}$的block来coupled。<br>因此，$F(.)$可以分为两个部分，第一个部分是m个$W_{i}s$，第二个部分是$W_{common}$。</p>
-
+<p><strong>疑问点：</strong></p>
+<ol>
+<li>本篇paper的TTnet是生成data networl的framework，但是不同的zero shot task的decoder不一样，这一点是如何保证可以生成的呢？</li>
+<li>这个work可以transfer到zero-shot的task上，我理解的关键之处在于两点：<ol>
+<li>任务间的相关矩阵，这个是通过DB算法计算出来的，由30个志愿者打分提供得分依赖</li>
+<li>训练时的transfer model可以让模型学习到transfer的特性<br><del>但是我并没有看到TTnet利用到zero-shot任务的数据</del>，这些任务的数据都是一样的，只是zero-shot没有相应的ground truth</li>
+</ol>
+</li>
+</ol>
+<p><strong>其他细节见paper</strong></p>
+<hr>
+<h3 id="C2AE-Class-Conditioned-Auto-Encoder-for-Open-set-Recognition"><a href="#C2AE-Class-Conditioned-Auto-Encoder-for-Open-set-Recognition" class="headerlink" title="C2AE: Class Conditioned Auto-Encoder for Open-set Recognition"></a><a href="http://arxiv.org/abs/1904.01198" target="_blank" rel="noopener">C2AE: Class Conditioned Auto-Encoder for Open-set Recognition</a></h3><blockquote>
+<p>这篇paper做的是open-set recognition，zero-shot相关的工作，中规中矩的unseen class分类。开放集识别是近两年一个特别新，且有实际研究价值的方向。作者提出了一个class conditioned auto-encoders的方法，训练过程中分为两个子任务：</p>
+<ol>
+<li>closed-set classification</li>
+<li>open-set identification(区分known还是unknown的class)</li>
+</ol>
+<p>encoder 用closed-set分类任务的pipeline学习第一个子任务，decoder通过条件重构class identity来学习第二个子任务。</p>
+</blockquote>
+<hr>
+<h3 id="NM-Net-Mining-Reliable-Neighbors-for-Robust-Feature-Correspondences"><a href="#NM-Net-Mining-Reliable-Neighbors-for-Robust-Feature-Correspondences" class="headerlink" title="NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences"></a><a href="http://arxiv.org/abs/1904.00320" target="_blank" rel="noopener">NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</a></h3>
       
     </div>
 
@@ -775,7 +795,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">3</span>
+                    <span class="site-state-item-count">5</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -815,7 +835,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -902,7 +924,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Zero-Shot-Task-Transfer"><span class="nav-number">1.</span> <span class="nav-text">Zero-Shot Task Transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.</span> <span class="nav-text">Method</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Zero-Shot-Task-Transfer"><span class="nav-number">1.</span> <span class="nav-text">Zero-Shot Task Transfer</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Method"><span class="nav-number">1.1.</span> <span class="nav-text">Method</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#C2AE-Class-Conditioned-Auto-Encoder-for-Open-set-Recognition"><span class="nav-number">2.</span> <span class="nav-text">C2AE: Class Conditioned Auto-Encoder for Open-set Recognition</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#NM-Net-Mining-Reliable-Neighbors-for-Robust-Feature-Correspondences"><span class="nav-number">3.</span> <span class="nav-text">NM-Net: Mining Reliable Neighbors for Robust Feature Correspondences</span></a></li></ol></div>
             
 
           </div>

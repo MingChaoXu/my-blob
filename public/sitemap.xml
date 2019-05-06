@@ -2,21 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xumingchao.xyz/2019/05/02/PaperReading/</loc>
+    <loc>https://xumingchao.xyz/blob%E6%94%B6%E5%BD%95%E8%B8%A9%E5%9D%91/</loc>
     
-    <lastmod>2019-05-03T13:21:09.836Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://xumingchao.xyz/2019/05/03/blob%E6%94%B6%E5%BD%95%E8%B8%A9%E5%9D%91/</loc>
-    
-    <lastmod>2019-05-03T11:37:59.519Z</lastmod>
+    <lastmod>2019-05-06T09:11:07.534Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://xumingchao.xyz/2019/05/01/hello-world/</loc>
+    <loc>https://xumingchao.xyz/pytorch-%E5%B9%B6%E8%A1%8Cbug/</loc>
+    
+    <lastmod>2019-05-06T06:28:15.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xumingchao.xyz/pytorch%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</loc>
+    
+    <lastmod>2019-05-05T10:17:05.490Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xumingchao.xyz/PaperReading/</loc>
+    
+    <lastmod>2019-05-04T12:28:47.602Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://xumingchao.xyz/hello-world/</loc>
     
     <lastmod>2019-05-02T13:55:29.434Z</lastmod>
     
