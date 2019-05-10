@@ -1,3 +1,3 @@
-https://xumingchao.xyz/pytorch-并行bug/
-https://xumingchao.xyz/pytorch调试记录/
-https://xumingchao.xyz/blob收录踩坑/
+https://xumingchao.xyz/马克飞象/
+https://xumingchao.xyz/warp-ctc/
+https://xumingchao.xyz/import/
