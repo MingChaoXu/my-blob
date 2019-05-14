@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[blob迁移教程]]></title>
+    <url>%2Fblob%E8%BF%81%E7%A7%BB%E6%95%99%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[日常生活中可能会遇到我们不能在自己的电脑上写博客的情况，hexo搭建的博客由于需要在本地安装相应的包，所以博主写这个博客来记录一下一键迁移的几个步骤o(≧v≦)o首先，从github上clone自己的博客代码，如果不是自己的电脑，建议不用ssh key，这里顺便简单介绍一下ssh key的建立方式：123$ cd ~/.ssh$ ssh-keygen -t rsa -C "your_email@example.com"$ clip &lt; ~/.ssh/id_rsa.pub把ssh key粘贴到github的密钥中，在setting中找到，测试ssh key是否成功1$ ssh -T git@github.com接下来是正文╮(╯▽╰)╭，clone自己的blob1$ git clone git@github.com:MingChaoXu/my-blob.git博主的一键安装脚本在这个地方，其实就是把自己需要安装的包写到一个脚本里去，运行脚本即可一键安装1$ git clone git@github.com:MingChaoXu/blob-move.git这里插一句题外话，要是git用的不熟的同学简单介绍一下如何做，首先在本地建立一个blob-move的文件夹，然后写相应的脚本blob-move.sh，接下来运行git init命令在本地初始化git，在github上新建一个空的项目blob-move，然后添加远程分支即可并push即可，命令如下：1234$ git remote add origin git@github.com:MingChaoXu/blob-move.git$ git add .$ git commit -m "new shell"$ git push言归正传，这时已经有了一键安装的脚本blob-move.sh，把他copy到博客文件夹下，运行如下命令即可：123$ npm install hexo --save$ hexo init$ sh blob-move.sh推荐文章Hexo搭建GitHub博客—打造炫酷的NexT主题–高级]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[马克飞象]]></title>
     <url>%2F%E9%A9%AC%E5%85%8B%E9%A3%9E%E8%B1%A1%2F</url>
     <content type="text"><![CDATA[由于这篇马克飞象的教程有markdown的语法，博主实在是懒，就摘过来了，方便自己查找欢迎使用马克飞象@(收集箱)[马克飞象, 帮助, Markdown]马克飞象是一款专为印象笔记（Evernote）打造的Markdown编辑器，通过精心的设计与技术实现，配合印象笔记强大的存储和同步功能，带来前所未有的书写体验。特点概述：功能丰富 ：支持高亮代码块、LaTeX 公式、流程图，本地图片以及附件上传，甚至截图粘贴，工作学习好帮手；得心应手 ：简洁高效的编辑器，提供桌面客户端以及离线Chrome App，支持移动端 Web；深度整合 ：支持选择笔记本和添加标签，支持从印象笔记跳转编辑，轻松管理。[TOC]Markdown简介Markdown 是一种轻量级标记语言，它允许人们使用易读易写的纯文本格式编写文档，然后转换成格式丰富的HTML页面。 —— 维基百科正如您在阅读的这份文档，它使用简单的符号标识不同的标题，将某些文字标记为粗体或者斜体，创建一个链接或一个脚注[^demo]。下面列举了几个高级功能，更多语法请按Ctrl + /查看帮助。代码块12345678910@requires_authorizationdef somefunc(param1='', param2=0): '''A docstring''' if param1 &gt; param2: # interesting print 'Greater' return (param2 - param1 + 1) or Noneclass SomeClass: pass&gt;&gt;&gt; message = '''interpreter... prompt'''LaTeX 公式可以创建行内公式，例如 $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$。或者块级公式：$$ x = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a} $$表格ItemValueQtyComputer1600 USD5Phone12 USD12Pipe1 USD234流程图12345678st=&gt;start: Starte=&gt;endop=&gt;operation: My Operationcond=&gt;condition: Yes or No?st-&gt;op-&gt;condcond(yes)-&gt;econd(no)-&gt;op以及时序图:123Alice-&gt;Bob: Hello Bob, how are you?Note right of Bob: Bob thinksBob--&gt;Alice: I am good thanks!提示：想了解更多，请查看流程图语法以及时序图语法。复选框使用 - [ ] 和 - [x] 语法可以创建复选框，实现 todo-list 等功能。例如： 已完成事项 待办事项1 待办事项2注意：目前支持尚不完全，在印象笔记中勾选复选框是无效、不能同步的，所以必须在马克飞象中修改 Markdown 原文才可生效。下个版本将会全面支持。[^demo]: 这是一个示例脚注。请查阅 MultiMarkdown 文档 关于脚注的说明。 限制： 印象笔记的笔记内容使用 ENML 格式，基于 HTML，但是不支持某些标签和属性，例如id，这就导致脚注和TOC无法正常点击。]]></content>
