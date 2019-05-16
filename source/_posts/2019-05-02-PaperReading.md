@@ -17,6 +17,7 @@ mathjax: true
 - [ ] **C-MIL: Continuation Multiple Instance Learning for Weakly Supervised Object Detection**
 - [ ] **Transferrable Prototypical Networks for Unsupervised Domain Adaptation**
 
+<!-- more -->
 
 <!-- ### On the Structural Sensitivity of Deep Convolutional Networks to the Directions of Fourier Basis Functions
 >  -->
