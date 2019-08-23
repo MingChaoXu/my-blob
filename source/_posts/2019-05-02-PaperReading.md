@@ -5,6 +5,8 @@ categories:
 - PaperReading
 tags: 
 - transfer learning
+- zero-shot
+- domain adaptation
 mathjax: true
 ---
 

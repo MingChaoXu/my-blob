@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[hexo+next配置——让自己的博客拥有版权声明]]></title>
+    <url>%2Fhexo-next%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E8%AE%A9%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8B%A5%E6%9C%89%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E%2F</url>
+    <content type="text"><![CDATA[让自己的博客的博客拥有版权声明是一件非常有必要的事，因为这样可以让爬虫爬取自己的博文时，增加自己被搜索到的权重，更重要的是让自己的成果不被别人轻易剽窃！(◎_◎;)下面博主介绍一下，如何利用hexo在next主题下添加自己的版权声明(´▽｀)新建post-copyright.swig文件修改文件themes/next/layout/_macro/post-copyright.swig，若是没有这个文件，则新建他复制代码如下，到这个文件中去1234567891011121314&lt;ul class=&quot;post-copyright&quot;&gt;&lt;li class=&quot;post-copyright-author&quot;&gt; &lt;strong&gt;&#123;&#123; __(&apos;post.copyright.author&apos;) + __(&apos;symbol.colon&apos;) &#125;&#125;&lt;/strong&gt; &#123;&#123; post.author | default(config.author) &#125;&#125;&lt;/li&gt;&lt;li class=&quot;post-copyright-link&quot;&gt; &lt;strong&gt;&#123;&#123; __(&apos;post.copyright.link&apos;) + __(&apos;symbol.colon&apos;) &#125;&#125;&lt;/strong&gt; &lt;a href=&quot;&#123;&#123; post.url | default(post.permalink) &#125;&#125;&quot; title=&quot;&#123;&#123; post.title &#125;&#125;&quot;&gt;&#123;&#123; post.url | default(post.permalink) &#125;&#125;&lt;/a&gt;&lt;/li&gt;&lt;li class=&quot;post-copyright-license&quot;&gt; &lt;strong&gt;&#123;&#123; __(&apos;post.copyright.license_title&apos;) + __(&apos;symbol.colon&apos;) &#125;&#125; &lt;/strong&gt; &#123;&#123; __(&apos;post.copyright.license_content&apos;, theme.post_copyright.license_url, theme.post_copyright.license) &#125;&#125;&lt;/li&gt;&lt;/ul&gt;打开开关在主题配置文件_config.yml中搜索post_copyright，将其属性改为true，若是没有这个属性，则添加这个属性12post_copyright: enable: true内嵌前端代码这里提一句如何在hexo博客中内嵌前端代码，我这里实验的codeblock不好使，所以我直接使用markdown的方式插入代码块了，即使用`]]></content>
+      <categories>
+        <category>Technology</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CVPR2019 PaperReading(2)]]></title>
+    <url>%2Fpaperreading%2F</url>
+    <content type="text"><![CDATA[[] Taking A Closer Look at Domain Shift: Category-level Adversaries for Semantics Consistent Domain Adaptationddddddxdfasdfaf]]></content>
+      <categories>
+        <category>PaperReading</category>
+      </categories>
+      <tags>
+        <tag>transfer learning</tag>
+        <tag>zero-shot</tag>
+        <tag>domain adaptation</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[blob迁移教程]]></title>
     <url>%2Fblob%E8%BF%81%E7%A7%BB%E6%95%99%E7%A8%8B%2F</url>
     <content type="text"><![CDATA[日常生活中可能会遇到我们不能在自己的电脑上写博客的情况，hexo搭建的博客由于需要在本地安装相应的包，所以博主写这个博客来记录一下一键迁移的几个步骤o(≧v≦)o首先，从github上clone自己的博客代码，如果不是自己的电脑，建议不用ssh key，这里顺便简单介绍一下ssh key的建立方式：123$ cd ~/.ssh$ ssh-keygen -t rsa -C "your_email@example.com"$ clip &lt; ~/.ssh/id_rsa.pub把ssh key粘贴到github的密钥中，在setting中找到，测试ssh key是否成功1$ ssh -T git@github.com接下来是正文╮(╯▽╰)╭，clone自己的blob1$ git clone git@github.com:MingChaoXu/my-blob.git博主的一键安装脚本在这个地方，其实就是把自己需要安装的包写到一个脚本里去，运行脚本即可一键安装1$ git clone git@github.com:MingChaoXu/blob-move.git这里插一句题外话，要是git用的不熟的同学简单介绍一下如何做，首先在本地建立一个blob-move的文件夹，然后写相应的脚本blob-move.sh，接下来运行git init命令在本地初始化git，在github上新建一个空的项目blob-move，然后添加远程分支即可并push即可，命令如下：1234$ git remote add origin git@github.com:MingChaoXu/blob-move.git$ git add .$ git commit -m "new shell"$ git push言归正传，这时已经有了一键安装的脚本blob-move.sh，把他copy到博客文件夹下，运行如下命令即可：123$ npm install hexo --save$ hexo init$ sh blob-move.sh推荐文章Hexo搭建GitHub博客—打造炫酷的NexT主题–高级]]></content>
@@ -110,6 +134,8 @@
       </categories>
       <tags>
         <tag>transfer learning</tag>
+        <tag>zero-shot</tag>
+        <tag>domain adaptation</tag>
       </tags>
   </entry>
   <entry>

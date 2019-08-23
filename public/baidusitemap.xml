@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://xumingchao.xyz/paperreading/</loc>
+    <lastmod>2019-05-17</lastmod>
+  </url>  <url>
+    <loc>https://xumingchao.xyz/hexo-next%E9%85%8D%E7%BD%AE%E2%80%94%E2%80%94%E8%AE%A9%E8%87%AA%E5%B7%B1%E7%9A%84%E5%8D%9A%E5%AE%A2%E6%8B%A5%E6%9C%89%E7%89%88%E6%9D%83%E5%A3%B0%E6%98%8E/</loc>
+    <lastmod>2019-05-16</lastmod>
+  </url>  <url>
+    <loc>https://xumingchao.xyz/blob%E8%BF%81%E7%A7%BB%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2019-05-16</lastmod>
+  </url>  <url>
+    <loc>https://xumingchao.xyz/PaperReading/</loc>
+    <lastmod>2019-05-16</lastmod>
+  </url>  <url>
     <loc>https://xumingchao.xyz/blob%E6%94%B6%E5%BD%95%E8%B8%A9%E5%9D%91/</loc>
     <lastmod>2019-05-14</lastmod>
   </url>  <url>
@@ -11,12 +23,6 @@
     <lastmod>2019-05-14</lastmod>
   </url>  <url>
     <loc>https://xumingchao.xyz/warp-ctc/</loc>
-    <lastmod>2019-05-14</lastmod>
-  </url>  <url>
-    <loc>https://xumingchao.xyz/blob%E8%BF%81%E7%A7%BB%E6%95%99%E7%A8%8B/</loc>
-    <lastmod>2019-05-14</lastmod>
-  </url>  <url>
-    <loc>https://xumingchao.xyz/PaperReading/</loc>
     <lastmod>2019-05-14</lastmod>
   </url>  <url>
     <loc>https://xumingchao.xyz/pytorch%E8%B0%83%E8%AF%95%E8%AE%B0%E5%BD%95/</loc>
